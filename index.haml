@@ -1,0 +1,94 @@
+---
+title: Chris Hoffman
+layout: default
+---
+
+/ Navigation
+%nav.navbar.navbar-default.navbar-fixed-top.topnav{:role => "navigation"}
+  .container.topnav
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#about"} About
+        %li
+          %a{:href => "#services"} Services
+        %li
+          %a{:href => "#contact"} Contact
+
+%a{:name => "about"}
+.intro-header
+  .container
+    .row
+      .col-lg-12
+        .intro-message
+          %h1 Chris Hoffman
+          %h3 Freelance Software Developer and Aspiring Data Scientist
+          %hr.intro-divider/
+          %ul.list-inline.intro-social-buttons
+            %li
+              %a.btn.btn-default.btn-lg{:href => "https://twitter.com/hoffmanc"}
+                %i.fa.fa-twitter.fa-fw
+                %span.network-name Twitter
+            %li
+              %a.btn.btn-default.btn-lg{:href => "https://github.com/hoffmanc"}
+                %i.fa.fa-github.fa-fw
+                %span.network-name Github
+            %li
+              %a.btn.btn-default.btn-lg{:href => "https://www.linkedin.com/in/hoffmanc1"}
+                %i.fa.fa-linkedin.fa-fw
+                %span.network-name Linkedin
+
+%a{:name => "services"}
+.content-section-a
+  .container
+    .row
+      .col-lg-5.col-sm-6
+        %hr.section-heading-spacer/
+        .clearfix
+        %h2.section-heading Software Developer
+        %p.lead Experience working on systems from web-based issue tracking to large data import and management projects.
+      .col-lg-5.col-lg-offset-2.col-sm-6
+        / <img class="img-responsive" src="img/ipad.png" alt="">
+
+.content-section-b
+  .container
+    .row
+      .col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
+        %hr.section-heading-spacer/
+        .clearfix
+        %h2.section-heading Aspiring Data Scientist
+        %p.lead Seeking opportunities to leverage my existing data management and statistical knowledge to aid organizations needing operational research.
+      .col-lg-5.col-sm-pull-6.col-sm-6
+        / <img class="img-responsive" src="img/dog.png" alt="">
+
+%a{:name => "contact"}
+.banner
+  .container
+    .row
+      .col-lg-5.col-sm-6
+        %hr.section-heading-spacer/
+        .clearfix
+        %h2.section-heading Contact
+        %p.lead Actively seeking project-based, research and development contracts.
+      .col-lg-5.col-lg-offset-2.col-sm-6
+        %form#ss-form{:action => "https://docs.google.com/forms/d/1wfiXjEXx3aM7T9Zb_j5p0GZHTgNvrV4moBCVBstltpE/formResponse", :method => "post", :name => "ss-form", :onsubmit => "", :target => "_self"}
+          .form-group
+            %label.sr-only{:for => "entry_1998356573"} Name
+            %input#entry_1998356573.form-control{:name => "entry.1998356573", :placeholder => "Name", :title => "", :type => "text"}/
+          .form-group
+            %label.sr-only{:for => "entry_547469711"} Email
+            %input#entry_547469711.form-control{:name => "entry.547469711", :placeholder => "Email", :title => "invalid email", :type => "email"}/
+          .form-group
+            %label.sr-only{:for => "entry_547469711"} Message
+            %textarea#entry_611030106.form-control{:name => "entry.611030106", :placeholder => "Message", :rows => "8"}
+              :preserve
+          .form-group
+            %button#ss-submit.btn.btn-default.btn-lg{:type => "submit"}
+              %i.fa.fa-envelope.fa-fw
+              Reach Out

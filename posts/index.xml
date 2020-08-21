@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Chris Hoffman</title>
+    <link>http://hoffmanc.com/posts/</link>
+    <description>Recent content in Posts on Chris Hoffman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Aug 2020 02:34:20 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git add `--edit`</title>
+      <link>http://hoffmanc.com/posts/til/</link>
+      <pubDate>Fri, 21 Aug 2020 02:34:20 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/til/</guid>
+      <description>TIL that I can use git add --edit during an interactive rebase to do things like move a file from a go package (created in that commit) to an existing package; this reduces the scope of the regex substitution to avoid changing unrelated code.</description>
+    </item>
+    
+  </channel>
+</rss>

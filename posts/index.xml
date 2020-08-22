@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2020 02:34:20 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Aug 2020 00:07:18 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unmarshal</title>
+      <link>http://hoffmanc.com/posts/unmarshal/</link>
+      <pubDate>Sat, 22 Aug 2020 00:07:18 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/unmarshal/</guid>
+      <description>Do not rely on the fact that go unmarshaled json without error into your type - it may just have ignored all the json and instantiated an empty variable.</description>
+    </item>
+    
     <item>
       <title>git add `--edit`</title>
       <link>http://hoffmanc.com/posts/til/</link>

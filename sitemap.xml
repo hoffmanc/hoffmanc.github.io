@@ -4,20 +4,27 @@
   
   <url>
     <loc>http://hoffmanc.com/</loc>
-    <lastmod>2020-08-21T02:34:20+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://hoffmanc.com/posts/til/</loc>
-    <lastmod>2020-08-21T02:34:20+00:00</lastmod>
+    <lastmod>2020-08-22T00:07:18+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://hoffmanc.com/posts/</loc>
+    <lastmod>2020-08-22T00:07:18+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hoffmanc.com/posts/unmarshal/</loc>
+    <lastmod>2020-08-22T00:07:18+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hoffmanc.com/posts/til/</loc>
     <lastmod>2020-08-21T02:34:20+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

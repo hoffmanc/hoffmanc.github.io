@@ -6,7 +6,17 @@
     <description>Recent content on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Aug 2020 02:10:38 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Aug 2020 12:55:00 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gohang</title>
+      <link>http://hoffmanc.com/posts/gohang/</link>
+      <pubDate>Tue, 25 Aug 2020 12:55:00 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/gohang/</guid>
+      <description>To make a go program hang until terminated, you can use this line:
+&amp;lt;-make(chan struct{}) Why would you want to do this? In our case we have a blue/green setup that and docker compose set to restart: always, so if the server reboots both the blue and green containers get spun up at the same time. Now we check to see which one is supposed to be active, and if a container doesn&amp;rsquo;t match, it executes this hang - otherwise docker will see the 0 exit code and constantly try restarting the container.</description>
+    </item>
+    
     <item>
       <title>House</title>
       <link>http://hoffmanc.com/posts/house/</link>

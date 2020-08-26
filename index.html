@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/" />
-<meta property="og:updated_time" content="2020-08-25T12:55:00+00:00" />
+<meta property="og:updated_time" content="2020-08-26T02:18:54+00:00" />
 <meta itemprop="name" content="Chris Hoffman">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -183,6 +183,31 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://hoffmanc.com/posts/use-effect/" class="color-inherit dim link">
+            useEffect style
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          I was able to modify the width of a stubborn react-admin component dynamically, using another DOM element as a reference point, and it was actually pretty clean! Here&rsquo;s a stripped-down version:
+MyComponent = () =&gt; { [width, setWidth] = useState() useEffect(() =&gt; { const main = document.querySelector(&#39;main&#39;); if (!main) { return; } setWidth(main.getBoundingClientRect().width - 50); }); render &lt;StubbornComponent style={{width}}/&gt; } I would&rsquo;ve preferred a pure-CSS solution, but this seems to be working and the code is temporary (well, moreso than usual, hopefully)
+        </div>
+          <a href="http://hoffmanc.com/posts/use-effect/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="http://hoffmanc.com/posts/gohang/" class="color-inherit dim link">
             Gohang
             </a>
@@ -200,37 +225,18 @@
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/house/" class="color-inherit dim link">
-            House
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          This weekend I learned a bit about what goes into putting a house together. The biggest take away was that making sure all the pieces are square and level is critical, and saves a lot of time down the road.
-For instance: there were two mud sills, or sill plates, on the foundation walls. The original plan was to shim the second course of sill so that it was totally level all the way around the foundation.
-        </div>
-          <a href="http://hoffmanc.com/posts/house/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/house/" class="link black dim">
+              House
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/unmarshal/" class="link black dim">

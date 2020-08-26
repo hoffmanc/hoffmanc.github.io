@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Aug 2020 12:55:00 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Aug 2020 02:18:54 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>useEffect style</title>
+      <link>http://hoffmanc.com/posts/use-effect/</link>
+      <pubDate>Wed, 26 Aug 2020 02:18:54 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/use-effect/</guid>
+      <description>I was able to modify the width of a stubborn react-admin component dynamically, using another DOM element as a reference point, and it was actually pretty clean! Here&amp;rsquo;s a stripped-down version:
+MyComponent = () =&amp;gt; { [width, setWidth] = useState() useEffect(() =&amp;gt; { const main = document.querySelector(&amp;#39;main&amp;#39;); if (!main) { return; } setWidth(main.getBoundingClientRect().width - 50); }); render &amp;lt;StubbornComponent style={{width}}/&amp;gt; } I would&amp;rsquo;ve preferred a pure-CSS solution, but this seems to be working and the code is temporary (well, moreso than usual, hopefully)</description>
+    </item>
+    
     <item>
       <title>Gohang</title>
       <link>http://hoffmanc.com/posts/gohang/</link>

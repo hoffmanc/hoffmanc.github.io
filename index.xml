@@ -6,7 +6,18 @@
     <description>Recent content on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2020 13:08:34 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Aug 2020 02:09:13 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Front Matter</title>
+      <link>http://hoffmanc.com/posts/front-matter/</link>
+      <pubDate>Fri, 28 Aug 2020 02:09:13 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/front-matter/</guid>
+      <description>Today I learned how to add some tags to these articles, with the hope that I can use them to conditionally syndicate these posts to twitter, linkedin, etc.
+I believe being able to generate an RSS feed for a script to use for syndication involves digging more deeply into taxonomies; specifically, making sure I am using a theme that supports rss templates for them, or adding my own?
+Which reminds me: I need to pull down my medium.</description>
+    </item>
+    
     <item>
       <title>QRCode</title>
       <link>http://hoffmanc.com/posts/qrcode/</link>

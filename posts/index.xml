@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2020 13:30:46 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Sep 2020 13:29:28 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ignore Revs</title>
+      <link>http://hoffmanc.com/posts/ignore-revs/</link>
+      <pubDate>Tue, 01 Sep 2020 13:29:28 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/ignore-revs/</guid>
+      <description>TIL that git version 2.23+ allows one to specify commits to ignore during a git blame. This is useful when there are commits that touched a lot of stuff but only changed formatting.
+I was able to update my version of git on ubuntu by adding the git core ppa, apt updating and installing.
+sudo add-apt-repository ppa:git-core/ppa Since I use tpope&amp;rsquo;s vim-fugitive to do blaming, I wanted not to have to specify the --ignore-rev flag every time I use this command, so I did the following:</description>
+    </item>
+    
     <item>
       <title>Amps</title>
       <link>http://hoffmanc.com/posts/amps/</link>

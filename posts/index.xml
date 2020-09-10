@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 13:29:28 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Sep 2020 13:02:43 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Splice</title>
+      <link>http://hoffmanc.com/posts/splice/</link>
+      <pubDate>Thu, 10 Sep 2020 13:02:43 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/splice/</guid>
+      <description>A couple of days ago I learned about the javascript method splice for arrays, which allows one to delete and replace elements of an array in one call. I&amp;rsquo;ve been using the immutable.js implementation of this method, and I&amp;rsquo;ve been quite pleased with how easy it is to e.g., move an element.
+For example, given this List:
+const ary = List([&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;,&amp;#39;d&amp;#39;]) If I want to move &amp;lsquo;b&amp;rsquo; to in between &amp;lsquo;c&amp;rsquo; and &amp;rsquo;d&amp;rsquo;, I would do the following:</description>
+    </item>
+    
     <item>
       <title>Ignore Revs</title>
       <link>http://hoffmanc.com/posts/ignore-revs/</link>

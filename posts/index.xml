@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2020 13:02:43 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2020 00:42:36 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brightness</title>
+      <link>http://hoffmanc.com/posts/brightness/</link>
+      <pubDate>Tue, 15 Sep 2020 00:42:36 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/brightness/</guid>
+      <description>I tried to help a colleague to get their brightness hotkeys working on Ubuntu using the i3wm. I had googled and implemented a solution for it, but then forgot what I did. So, here it is, for the sake of Future Chris. This solution is applicable to the lenovo t470p and t480 at least.
+place this script in /etc/acpi/brightness.sh:
+#!/bin/bash  current_brightness=`cat /sys/class/backlight/intel_backlight/brightness` max_brightness=`cat /sys/class/backlight/intel_backlight/max_brightness` if [ $1 == &amp;#34;up&amp;#34; ] then new_brightness=$(($current_brightness + 100)) [ $new_brightness -gt $max_brightness ] &amp;amp;&amp;amp; new_brightness=$max_brightness else new_brightness=$(($current_brightness - 100)) [ $new_brightness -lt 0 ] &amp;amp;&amp;amp; new_brightness=0 fi echo $new_brightness &amp;gt; /sys/class/backlight/intel_backlight/brightness and these under /etc/acpi/events:</description>
+    </item>
+    
     <item>
       <title>Splice</title>
       <link>http://hoffmanc.com/posts/splice/</link>

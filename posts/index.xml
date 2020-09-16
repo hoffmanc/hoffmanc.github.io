@@ -6,7 +6,28 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2020 00:42:36 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Sep 2020 15:07:31 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pi4midi</title>
+      <link>http://hoffmanc.com/posts/pi4midi/</link>
+      <pubDate>Wed, 16 Sep 2020 15:07:31 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/pi4midi/</guid>
+      <description>I promised my daughter Lila that I&amp;rsquo;d get this USB-MIDI keyboard controller working, which I had been talking about doing for some weeks, but which has become more pertinent, given that we are going to be homeschooling, and music is part of our curriculum.
+Anyway, here are notes on how I got MIDI sound working on a Pi4 2GB with my Nektar IMPACT iX61 MIDI controller:
+Setup  Install base raspberry OS apt install qsynth Start jackd with the seq module so the MIDI keyboard works (from http://slackermedia.</description>
+    </item>
+    
+    <item>
+      <title>Thermostat</title>
+      <link>http://hoffmanc.com/posts/thermostat/</link>
+      <pubDate>Tue, 15 Sep 2020 13:48:03 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/thermostat/</guid>
+      <description>Notes for how I go about setting up my Pi-Zero-W-based thermostat, since I keep having to reflash the SD card due to a poor power supply (I know, the right one is cheap&amp;hellip; yes yes).
+ Get Pi latest Raspberry Pi OS Lite Change passwd Go into sudo raspi-config  change hostname to thermostat enable wifi enable SSH   reboot ssh-keygen add pub key to github git clone git@github.com:hoffmanc/heater.git cd heater sudo .</description>
+    </item>
+    
     <item>
       <title>Brightness</title>
       <link>http://hoffmanc.com/posts/brightness/</link>

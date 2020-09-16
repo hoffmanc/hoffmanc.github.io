@@ -3,21 +3,35 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://hoffmanc.com/posts/brightness/</loc>
-    <lastmod>2020-09-15T00:42:36+00:00</lastmod>
+    <loc>http://hoffmanc.com/</loc>
+    <lastmod>2020-09-16T15:07:31+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://hoffmanc.com/</loc>
-    <lastmod>2020-09-15T00:42:36+00:00</lastmod>
+    <loc>http://hoffmanc.com/posts/pi4midi/</loc>
+    <lastmod>2020-09-16T15:07:31+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://hoffmanc.com/posts/</loc>
+    <lastmod>2020-09-16T15:07:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hoffmanc.com/posts/thermostat/</loc>
+    <lastmod>2020-09-15T13:48:03+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hoffmanc.com/posts/brightness/</loc>
     <lastmod>2020-09-15T00:42:36+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/" />
-<meta property="og:updated_time" content="2020-09-15T00:42:36+00:00" />
+<meta property="og:updated_time" content="2020-09-16T15:07:31+00:00" />
 <meta itemprop="name" content="Chris Hoffman">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -183,16 +183,16 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/brightness/" class="color-inherit dim link">
-            Brightness
+          <a href="http://hoffmanc.com/posts/pi4midi/" class="color-inherit dim link">
+            Pi4midi
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          I tried to help a colleague to get their brightness hotkeys working on Ubuntu using the i3wm. I had googled and implemented a solution for it, but then forgot what I did. So, here it is, for the sake of Future Chris. This solution is applicable to the lenovo t470p and t480 at least.
-place this script in /etc/acpi/brightness.sh:
-#!/bin/bash  current_brightness=`cat /sys/class/backlight/intel_backlight/brightness` max_brightness=`cat /sys/class/backlight/intel_backlight/max_brightness` if [ $1 == &#34;up&#34; ] then new_brightness=$(($current_brightness + 100)) [ $new_brightness -gt $max_brightness ] &amp;&amp; new_brightness=$max_brightness else new_brightness=$(($current_brightness - 100)) [ $new_brightness -lt 0 ] &amp;&amp; new_brightness=0 fi echo $new_brightness &gt; /sys/class/backlight/intel_backlight/brightness and these under /etc/acpi/events:
+          I promised my daughter Lila that I&rsquo;d get this USB-MIDI keyboard controller working, which I had been talking about doing for some weeks, but which has become more pertinent, given that we are going to be homeschooling, and music is part of our curriculum.
+Anyway, here are notes on how I got MIDI sound working on a Pi4 2GB with my Nektar IMPACT iX61 MIDI controller:
+Setup  Install base raspberry OS apt install qsynth Start jackd with the seq module so the MIDI keyboard works (from http://slackermedia.
         </div>
-          <a href="http://hoffmanc.com/posts/brightness/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/pi4midi/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -209,16 +209,15 @@ place this script in /etc/acpi/brightness.sh:
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/splice/" class="color-inherit dim link">
-            Splice
+          <a href="http://hoffmanc.com/posts/thermostat/" class="color-inherit dim link">
+            Thermostat
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          A couple of days ago I learned about the javascript method splice for arrays, which allows one to delete and replace elements of an array in one call. I&rsquo;ve been using the immutable.js implementation of this method, and I&rsquo;ve been quite pleased with how easy it is to e.g., move an element.
-For example, given this List:
-const ary = List([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]) If I want to move &lsquo;b&rsquo; to in between &lsquo;c&rsquo; and &rsquo;d&rsquo;, I would do the following:
+          Notes for how I go about setting up my Pi-Zero-W-based thermostat, since I keep having to reflash the SD card due to a poor power supply (I know, the right one is cheap&hellip; yes yes).
+ Get Pi latest Raspberry Pi OS Lite Change passwd Go into sudo raspi-config  change hostname to thermostat enable wifi enable SSH   reboot ssh-keygen add pub key to github git clone git@github.com:hoffmanc/heater.git cd heater sudo .
         </div>
-          <a href="http://hoffmanc.com/posts/splice/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/thermostat/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -235,6 +234,18 @@ const ary = List([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]) If I want to
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/brightness/" class="link black dim">
+              Brightness
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/splice/" class="link black dim">
+              Splice
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/ignore-revs/" class="link black dim">
               Ignore Revs
             </a>
@@ -243,18 +254,6 @@ const ary = List([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]) If I want to
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/amps/" class="link black dim">
               Amps
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://hoffmanc.com/posts/saturn/" class="link black dim">
-              Saturn
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://hoffmanc.com/posts/front-matter/" class="link black dim">
-              Front Matter
             </a>
           </h2>
         

@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Sep 2020 21:42:12 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Sep 2020 22:30:38 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>try/finally in Bash</title>
+      <link>http://hoffmanc.com/posts/tryfinallybash/</link>
+      <pubDate>Wed, 16 Sep 2020 22:30:38 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/tryfinallybash/</guid>
+      <description>If you need to do some cleanup whether or not a part of a bash script ran successfully, but also want to exit immediately if other stuff in that script fails, use a subshell:
+set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fails it exits without the cleanup ( # &amp;lt;--- subshell set -e executableThatLooksForTheFileAndMaybeFails ) rm fileThatAlwaysGetsRemoved </description>
+    </item>
+    
     <item>
       <title>Docker Compose Env Vars</title>
       <link>http://hoffmanc.com/posts/docker-compose-env-vars/</link>

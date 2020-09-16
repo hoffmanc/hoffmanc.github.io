@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/" />
-<meta property="og:updated_time" content="2020-09-16T21:42:12+00:00" />
+<meta property="og:updated_time" content="2020-09-16T22:30:38+00:00" />
 <meta itemprop="name" content="Chris Hoffman">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -183,14 +183,15 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/docker-compose-env-vars/" class="color-inherit dim link">
-            Docker Compose Env Vars
+          <a href="http://hoffmanc.com/posts/tryfinallybash/" class="color-inherit dim link">
+            try/finally in Bash
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          TIL that docker compose knows when environment variables have changed, and intelligently recreates containers on up if so. Also, environment variables do not get updated to what&rsquo;s in the .env file on a restart.
+          If you need to do some cleanup whether or not a part of a bash script ran successfully, but also want to exit immediately if other stuff in that script fails, use a subshell:
+set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fails it exits without the cleanup ( # &lt;--- subshell set -e executableThatLooksForTheFileAndMaybeFails ) rm fileThatAlwaysGetsRemoved 
         </div>
-          <a href="http://hoffmanc.com/posts/docker-compose-env-vars/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/tryfinallybash/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -207,16 +208,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/pi4midi/" class="color-inherit dim link">
-            Pi4midi
+          <a href="http://hoffmanc.com/posts/docker-compose-env-vars/" class="color-inherit dim link">
+            Docker Compose Env Vars
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          I promised my daughter Lila that I&rsquo;d get this USB-MIDI keyboard controller working, which I had been talking about doing for some weeks, but which has become more pertinent, given that we are going to be homeschooling, and music is part of our curriculum.
-Anyway, here are notes on how I got MIDI sound working on a Pi4 2GB with my Nektar IMPACT iX61 MIDI controller:
-Setup  Install base raspberry OS apt install qsynth Start jackd with the seq module so the MIDI keyboard works (from http://slackermedia.
+          TIL that docker compose knows when environment variables have changed, and intelligently recreates containers on up if so. Also, environment variables do not get updated to what&rsquo;s in the .env file on a restart.
         </div>
-          <a href="http://hoffmanc.com/posts/pi4midi/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/docker-compose-env-vars/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -233,6 +232,12 @@ Setup  Install base raspberry OS apt install qsynth Start jackd with the seq mod
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/pi4midi/" class="link black dim">
+              Pi4midi
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/thermostat/" class="link black dim">
               Thermostat
             </a>
@@ -247,12 +252,6 @@ Setup  Install base raspberry OS apt install qsynth Start jackd with the seq mod
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/splice/" class="link black dim">
               Splice
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://hoffmanc.com/posts/ignore-revs/" class="link black dim">
-              Ignore Revs
             </a>
           </h2>
         

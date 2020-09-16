@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/posts/" />
-<meta property="og:updated_time" content="2020-09-16T21:42:12+00:00" />
+<meta property="og:updated_time" content="2020-09-16T22:30:38+00:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -157,6 +157,22 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/tryfinallybash/" class="link black dim">
+        try/finally in Bash
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      If you need to do some cleanup whether or not a part of a bash script ran successfully, but also want to exit immediately if other stuff in that script fails, use a subshell:
+set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fails it exits without the cleanup ( # &lt;--- subshell set -e executableThatLooksForTheFileAndMaybeFails ) rm fileThatAlwaysGetsRemoved 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://hoffmanc.com/posts/docker-compose-env-vars/" class="link black dim">
         Docker Compose Env Vars
       </a>
@@ -218,23 +234,6 @@ place this script in /etc/acpi/brightness.sh:
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/splice/" class="link black dim">
-        Splice
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      A couple of days ago I learned about the javascript method splice for arrays, which allows one to delete and replace elements of an array in one call. I&rsquo;ve been using the immutable.js implementation of this method, and I&rsquo;ve been quite pleased with how easy it is to e.g., move an element.
-For example, given this List:
-const ary = List([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]) If I want to move &lsquo;b&rsquo; to in between &lsquo;c&rsquo; and &rsquo;d&rsquo;, I would do the following:
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 <ul class="pagination">
   <li class="page-item">
@@ -253,10 +252,13 @@ const ary = List([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]) If I want to
     <a class="page-link" href="/posts/page/3/">3</a>
   </li>
   <li class="page-item">
+    <a class="page-link" href="/posts/page/4/">4</a>
+  </li>
+  <li class="page-item">
     <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

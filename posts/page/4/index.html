@@ -157,81 +157,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/splice/" class="link black dim">
-        Splice
+      <a href="http://hoffmanc.com/posts/til/" class="link black dim">
+        git add `--edit`
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      A couple of days ago I learned about the javascript method splice for arrays, which allows one to delete and replace elements of an array in one call. I&rsquo;ve been using the immutable.js implementation of this method, and I&rsquo;ve been quite pleased with how easy it is to e.g., move an element.
-For example, given this List:
-const ary = List([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;]) If I want to move &lsquo;b&rsquo; to in between &lsquo;c&rsquo; and &rsquo;d&rsquo;, I would do the following:
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/ignore-revs/" class="link black dim">
-        Ignore Revs
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      TIL that git version 2.23+ allows one to specify commits to ignore during a git blame. This is useful when there are commits that touched a lot of stuff but only changed formatting.
-I was able to update my version of git on ubuntu by adding the git core ppa, apt updating and installing.
-sudo add-apt-repository ppa:git-core/ppa Since I use tpope&rsquo;s vim-fugitive to do blaming, I wanted not to have to specify the --ignore-rev flag every time I use this command, so I did the following:
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/amps/" class="link black dim">
-        Amps
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Today I learned that the little DC adapter I was trying to use to power a ODROID C1 was insufficient, at least when it came to spinning up a GUI.
-I have this old Lenovo power adapter that is pushing 20V, so I&rsquo;m looking into stepping down that voltage somehow to 5V. I tried to use a potentiometer to achieve this purpose, which likely belies my electronics knowledge - in short, it didn&rsquo;t work.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/saturn/" class="link black dim">
-        Saturn
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Today Lila and I saw Saturn through her telescope! We could clearly make out it&rsquo;s four moons and rings! I think this is the first time either of us have seen something so cool in a telescope (her being nine, so less unusual).
-Now I feel compelled to learn some amateur astronomy.
-And build a rocket.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/front-matter/" class="link black dim">
-        Front Matter
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Today I learned how to add some tags to these articles, with the hope that I can use them to conditionally syndicate these posts to twitter, linkedin, etc.
-I believe being able to generate an RSS feed for a script to use for syndication involves digging more deeply into taxonomies; specifically, making sure I am using a theme that supports rss templates for them, or adding my own?
-UPDATE - after publishing this article, I see a syndications/twitter folder that has exactly what I need for a script to sync this blog with, in this case, twitter!
+      TIL that I can use git add --edit during an interactive rebase to do things like move a file from a go package (created in that commit) to an existing package; this reduces the scope of the regex substitution to avoid changing unrelated code.
     </div>
   </div>
 </div>
@@ -243,22 +174,22 @@ UPDATE - after publishing this article, I see a syndications/twitter folder that
     <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    <a href="/posts/page/3/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
   </li>
   <li class="page-item">
     <a class="page-link" href="/posts/">1</a>
   </li>
-  <li class="page-item active">
+  <li class="page-item">
     <a class="page-link" href="/posts/page/2/">2</a>
   </li>
   <li class="page-item">
     <a class="page-link" href="/posts/page/3/">3</a>
   </li>
-  <li class="page-item">
+  <li class="page-item active">
     <a class="page-link" href="/posts/page/4/">4</a>
   </li>
-  <li class="page-item">
-    <a href="/posts/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
     <a href="/posts/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>

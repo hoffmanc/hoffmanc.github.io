@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/posts/" />
-<meta property="og:updated_time" content="2020-09-28T22:43:43+00:00" />
+<meta property="og:updated_time" content="2020-10-19T16:38:53+00:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -157,6 +157,38 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/git-timestamps/" class="link black dim">
+        Git Timestamps
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      I just ran into a scenario where the git log was not telling me the correct order of commits. This mis-ordering happened because git only keeps/considers the commit timestamps up to the nearest second. So, if you have a script that is creating a bunch of commits, you could have several that are associated with one second, which will result in the mis-ordering.
+To get a more accurate order, use the --graph option on git log.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/k8s-monitoring/" class="link black dim">
+        k8s Monitoring
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Some commands that are useful for monitoring k8s:
+&gt; kubectl get namespace NAME STATUS AGE c66-system Active 83d default Active 83d kube-node-lease Active 83d kube-public Active 83d kube-system Active 83d menopon Active 83d &gt; kubectl get pods --namespace=menopon NAME READY STATUS RESTARTS AGE redis-649f7db499-sl6h4 1/1 Running 0 74d web-69c576797d-7x7h2 1/1 Running 0 74d web-69c576797d-mjgfs 1/1 Running 0 74d web-69c576797d-zbfkz 1/1 Running 0 74d also, look to /var/log/pods for pod logs:
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://hoffmanc.com/posts/mui-class-override/" class="link black dim">
         Mui Class Override
       </a>
@@ -195,39 +227,6 @@ set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fai
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       TIL that docker compose knows when environment variables have changed, and intelligently recreates containers on up if so. Also, environment variables do not get updated to what&rsquo;s in the .env file on a restart.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/pi4midi/" class="link black dim">
-        Pi4midi
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      I promised my daughter Lila that I&rsquo;d get this USB-MIDI keyboard controller working, which I had been talking about doing for some weeks, but which has become more pertinent, given that we are going to be homeschooling, and music is part of our curriculum.
-Anyway, here are notes on how I got MIDI sound working on a Pi4 2GB with my Nektar IMPACT iX61 MIDI controller:
-Setup  Install base raspberry OS apt install qsynth Start jackd with the seq module so the MIDI keyboard works (from http://slackermedia.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/thermostat/" class="link black dim">
-        Thermostat
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Notes for how I go about setting up my Pi-Zero-W-based thermostat, since I keep having to reflash the SD card due to a poor power supply (I know, the right one is cheap&hellip; yes yes).
- Get Pi latest Raspberry Pi OS Lite Change passwd Go into sudo raspi-config  change hostname to thermostat enable wifi enable SSH   reboot ssh-keygen add pub key to github git clone git@github.com:hoffmanc/heater.git cd heater sudo .
     </div>
   </div>
 </div>

@@ -6,7 +6,27 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 22:43:43 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Oct 2020 16:38:53 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Timestamps</title>
+      <link>http://hoffmanc.com/posts/git-timestamps/</link>
+      <pubDate>Mon, 19 Oct 2020 16:38:53 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/git-timestamps/</guid>
+      <description>I just ran into a scenario where the git log was not telling me the correct order of commits. This mis-ordering happened because git only keeps/considers the commit timestamps up to the nearest second. So, if you have a script that is creating a bunch of commits, you could have several that are associated with one second, which will result in the mis-ordering.
+To get a more accurate order, use the --graph option on git log.</description>
+    </item>
+    
+    <item>
+      <title>k8s Monitoring</title>
+      <link>http://hoffmanc.com/posts/k8s-monitoring/</link>
+      <pubDate>Sun, 18 Oct 2020 23:57:59 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/k8s-monitoring/</guid>
+      <description>Some commands that are useful for monitoring k8s:
+&amp;gt; kubectl get namespace NAME STATUS AGE c66-system Active 83d default Active 83d kube-node-lease Active 83d kube-public Active 83d kube-system Active 83d menopon Active 83d &amp;gt; kubectl get pods --namespace=menopon NAME READY STATUS RESTARTS AGE redis-649f7db499-sl6h4 1/1 Running 0 74d web-69c576797d-7x7h2 1/1 Running 0 74d web-69c576797d-mjgfs 1/1 Running 0 74d web-69c576797d-zbfkz 1/1 Running 0 74d also, look to /var/log/pods for pod logs:</description>
+    </item>
+    
     <item>
       <title>Mui Class Override</title>
       <link>http://hoffmanc.com/posts/mui-class-override/</link>

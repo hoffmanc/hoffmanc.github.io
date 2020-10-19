@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/" />
-<meta property="og:updated_time" content="2020-09-28T22:43:43+00:00" />
+<meta property="og:updated_time" content="2020-10-19T16:38:53+00:00" />
 <meta itemprop="name" content="Chris Hoffman">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -183,15 +183,15 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/mui-class-override/" class="color-inherit dim link">
-            Mui Class Override
+          <a href="http://hoffmanc.com/posts/git-timestamps/" class="color-inherit dim link">
+            Git Timestamps
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          If you need to override some CSS in a component that you didn&rsquo;t author, but aren&rsquo;t sure what the options are, just use a dummy one and check the dev tools console for errors. The available class names should be listed in the error message.
-const classes = useStyles() &lt;ExternalComponent classes={{dummy: classes.myCssClass}}/&gt; 
+          I just ran into a scenario where the git log was not telling me the correct order of commits. This mis-ordering happened because git only keeps/considers the commit timestamps up to the nearest second. So, if you have a script that is creating a bunch of commits, you could have several that are associated with one second, which will result in the mis-ordering.
+To get a more accurate order, use the --graph option on git log.
         </div>
-          <a href="http://hoffmanc.com/posts/mui-class-override/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/git-timestamps/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -208,15 +208,15 @@ const classes = useStyles() &lt;ExternalComponent classes={{dummy: classes.myCss
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/tryfinallybash/" class="color-inherit dim link">
-            try/finally in Bash
+          <a href="http://hoffmanc.com/posts/k8s-monitoring/" class="color-inherit dim link">
+            k8s Monitoring
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          If you need to do some cleanup whether or not a part of a bash script ran successfully, but also want to exit immediately if other stuff in that script fails, use a subshell:
-set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fails it exits without the cleanup ( # &lt;--- subshell set -e executableThatLooksForTheFileAndMaybeFails ) rm fileThatAlwaysGetsRemoved 
+          Some commands that are useful for monitoring k8s:
+&gt; kubectl get namespace NAME STATUS AGE c66-system Active 83d default Active 83d kube-node-lease Active 83d kube-public Active 83d kube-system Active 83d menopon Active 83d &gt; kubectl get pods --namespace=menopon NAME READY STATUS RESTARTS AGE redis-649f7db499-sl6h4 1/1 Running 0 74d web-69c576797d-7x7h2 1/1 Running 0 74d web-69c576797d-mjgfs 1/1 Running 0 74d web-69c576797d-zbfkz 1/1 Running 0 74d also, look to /var/log/pods for pod logs:
         </div>
-          <a href="http://hoffmanc.com/posts/tryfinallybash/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/k8s-monitoring/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -233,6 +233,18 @@ set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fai
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/mui-class-override/" class="link black dim">
+              Mui Class Override
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/tryfinallybash/" class="link black dim">
+              try/finally in Bash
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/docker-compose-env-vars/" class="link black dim">
               Docker Compose Env Vars
             </a>
@@ -241,18 +253,6 @@ set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fai
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/pi4midi/" class="link black dim">
               Pi4midi
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://hoffmanc.com/posts/thermostat/" class="link black dim">
-              Thermostat
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://hoffmanc.com/posts/brightness/" class="link black dim">
-              Brightness
             </a>
           </h2>
         

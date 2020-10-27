@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2020 16:38:53 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Oct 2020 16:56:57 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Compose Override</title>
+      <link>http://hoffmanc.com/posts/docker-compose-override/</link>
+      <pubDate>Tue, 27 Oct 2020 16:56:57 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/docker-compose-override/</guid>
+      <description>Note to self: if I am not seeing env var overrides that I specify in a docker compose override file, check the following:
+ is the file spelled correctly (e.g., hyphens vs periods and singular!) docker-compose.override.yml is it in the same directory as docker-compose.yml? is the dk convenience alias/script directly citing the config files, such as docker-compose -f docker-compose.yml? If so, you need to add another -f with the override.  </description>
+    </item>
+    
     <item>
       <title>Git Timestamps</title>
       <link>http://hoffmanc.com/posts/git-timestamps/</link>

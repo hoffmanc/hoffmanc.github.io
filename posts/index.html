@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/posts/" />
-<meta property="og:updated_time" content="2020-10-19T16:38:53+00:00" />
+<meta property="og:updated_time" content="2020-10-27T16:56:57+00:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -157,6 +157,22 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/docker-compose-override/" class="link black dim">
+        Docker Compose Override
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Note to self: if I am not seeing env var overrides that I specify in a docker compose override file, check the following:
+ is the file spelled correctly (e.g., hyphens vs periods and singular!) docker-compose.override.yml is it in the same directory as docker-compose.yml? is the dk convenience alias/script directly citing the config files, such as docker-compose -f docker-compose.yml? If so, you need to add another -f with the override.  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://hoffmanc.com/posts/git-timestamps/" class="link black dim">
         Git Timestamps
       </a>
@@ -212,21 +228,6 @@ const classes = useStyles() &lt;ExternalComponent classes={{dummy: classes.myCss
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       If you need to do some cleanup whether or not a part of a bash script ran successfully, but also want to exit immediately if other stuff in that script fails, use a subshell:
 set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fails it exits without the cleanup ( # &lt;--- subshell set -e executableThatLooksForTheFileAndMaybeFails ) rm fileThatAlwaysGetsRemoved 
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/docker-compose-env-vars/" class="link black dim">
-        Docker Compose Env Vars
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      TIL that docker compose knows when environment variables have changed, and intelligently recreates containers on up if so. Also, environment variables do not get updated to what&rsquo;s in the .env file on a restart.
     </div>
   </div>
 </div>

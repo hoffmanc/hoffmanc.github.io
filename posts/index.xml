@@ -6,7 +6,27 @@
     <description>Recent content in Posts on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 16:56:57 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 18:45:11 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Equal Values</title>
+      <link>http://hoffmanc.com/posts/equal-values/</link>
+      <pubDate>Tue, 10 Nov 2020 18:45:11 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/equal-values/</guid>
+      <description>TIL that assert.EqualValues allows one to compare numerals of differing types for equality:
+package main import ( &amp;#34;testing&amp;#34; &amp;#34;github.com/stretchr/testify/assert&amp;#34; ) func TestFoo(t *testing.T) { assert.EqualValues(t, int64(1), uint(1)) assert.EqualValues(t, int64(1), 1.0) } These asserts should both pass.</description>
+    </item>
+    
+    <item>
+      <title>Streaming</title>
+      <link>http://hoffmanc.com/posts/streaming/</link>
+      <pubDate>Tue, 03 Nov 2020 00:50:15 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/streaming/</guid>
+      <description>I often get down on how verbose Go is as compared to Ruby. However, this is an example where Go (and go-gin) is quite terse for what it&amp;rsquo;s doing:
+chanStream := make(chan string) go func() { defer close(chanStream) for i := 0; i &amp;lt; 10; i += 1 { chanStream &amp;lt;- fmt.Sprintf(&amp;#34;msg %d&amp;#34;, i) } }() c.Stream(func(w io.Writer) bool { if msg, ok := &amp;lt;-chanStream; ok { c.SSEvent(&amp;#34;message&amp;#34;, msg) return true } return false }) In this code we create a streaming HTTP response, such that the main server is not tied up while sending down data to the client.</description>
+    </item>
+    
     <item>
       <title>Docker Compose Override</title>
       <link>http://hoffmanc.com/posts/docker-compose-override/</link>

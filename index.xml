@@ -6,7 +6,18 @@
     <description>Recent content on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2020 18:45:11 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 22:21:46 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>assert.Len</title>
+      <link>http://hoffmanc.com/posts/assert.len/</link>
+      <pubDate>Sun, 15 Nov 2020 22:21:46 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/assert.len/</guid>
+      <description>TIL that you can replace
+assert.Equal(t, 3, len(someSlice)) with
+assert.Len(t, someSlice, 3) Why they mix up which is the expected param is beyond me, but otherwise I like not having to add the len().</description>
+    </item>
+    
     <item>
       <title>Equal Values</title>
       <link>http://hoffmanc.com/posts/equal-values/</link>

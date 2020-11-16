@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/posts/" />
-<meta property="og:updated_time" content="2020-11-10T18:45:11+00:00" />
+<meta property="og:updated_time" content="2020-11-15T22:21:46+00:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -157,6 +157,23 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/assert.len/" class="link black dim">
+        assert.Len
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      TIL that you can replace
+assert.Equal(t, 3, len(someSlice)) with
+assert.Len(t, someSlice, 3) Why they mix up which is the expected param is beyond me, but otherwise I like not having to add the len().
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://hoffmanc.com/posts/equal-values/" class="link black dim">
         Equal Values
       </a>
@@ -212,22 +229,6 @@ chanStream := make(chan string) go func() { defer close(chanStream) for i := 0; 
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       I just ran into a scenario where the git log was not telling me the correct order of commits. This mis-ordering happened because git only keeps/considers the commit timestamps up to the nearest second. So, if you have a script that is creating a bunch of commits, you could have several that are associated with one second, which will result in the mis-ordering.
 To get a more accurate order, use the --graph option on git log.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/k8s-monitoring/" class="link black dim">
-        k8s Monitoring
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Some commands that are useful for monitoring k8s:
-&gt; kubectl get namespace NAME STATUS AGE c66-system Active 83d default Active 83d kube-node-lease Active 83d kube-public Active 83d kube-system Active 83d menopon Active 83d &gt; kubectl get pods --namespace=menopon NAME READY STATUS RESTARTS AGE redis-649f7db499-sl6h4 1/1 Running 0 74d web-69c576797d-7x7h2 1/1 Running 0 74d web-69c576797d-mjgfs 1/1 Running 0 74d web-69c576797d-zbfkz 1/1 Running 0 74d also, look to /var/log/pods for pod logs:
     </div>
   </div>
 </div>

@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/posts/" />
-<meta property="og:updated_time" content="2020-11-15T22:21:46+00:00" />
+<meta property="og:updated_time" content="2020-11-30T13:36:56+00:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -157,6 +157,39 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/ignore-revs/" class="link black dim">
+        Ignore Revs
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      TIL that git version 2.23+ allows one to specify commits to ignore during a git blame. This is useful when there are commits that touched a lot of stuff but only changed formatting.
+I was able to update my version of git on ubuntu by adding the git core ppa, apt updating and installing.
+sudo add-apt-repository ppa:git-core/ppa Since I use tpope&rsquo;s vim-fugitive to do blaming, I wanted not to have to specify the --ignore-rev flag every time I use this command, so I did the following:
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/amps/" class="link black dim">
+        Amps
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Today I learned that the little DC adapter I was trying to use to power a ODROID C1 was insufficient, at least when it came to spinning up a GUI.
+I have this old Lenovo power adapter that is pushing 20V, so I&rsquo;m looking into stepping down that voltage somehow to 5V. I tried to use a potentiometer to achieve this purpose, which likely belies my electronics knowledge - in short, it didn&rsquo;t work.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://hoffmanc.com/posts/saturn/" class="link black dim">
         Saturn
       </a>
@@ -197,38 +230,6 @@ UPDATE - after publishing this article, I see a syndications/twitter folder that
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       Chris, I am a QRCode. Remember my name, god damnit!
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/use-effect/" class="link black dim">
-        useEffect style
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      I was able to modify the width of a stubborn react-admin component dynamically, using another DOM element as a reference point, and it was actually pretty clean! Here&rsquo;s a stripped-down version:
-MyComponent = () =&gt; { [width, setWidth] = useState() useEffect(() =&gt; { const main = document.querySelector(&#39;main&#39;); if (!main) { return; } setWidth(main.getBoundingClientRect().width - 50); }); render &lt;StubbornComponent style={{width}}/&gt; } I would&rsquo;ve preferred a pure-CSS solution, but this seems to be working and the code is temporary (well, moreso than usual, hopefully)
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/gohang/" class="link black dim">
-        Gohang
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      To make a go program hang until terminated, you can use this line:
-&lt;-make(chan struct{}) Why would you want to do this? In our case we have a blue/green setup that and docker compose set to restart: always, so if the server reboots both the blue and green containers get spun up at the same time. Now we check to see which one is supposed to be active, and if a container doesn&rsquo;t match, it executes this hang - otherwise docker will see the 0 exit code and constantly try restarting the container.
     </div>
   </div>
 </div>

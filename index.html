@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/" />
-<meta property="og:updated_time" content="2020-11-15T22:21:46+00:00" />
+<meta property="og:updated_time" content="2020-11-30T13:36:56+00:00" />
 <meta itemprop="name" content="Chris Hoffman">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -183,16 +183,16 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/assert.len/" class="color-inherit dim link">
-            assert.Len
+          <a href="http://hoffmanc.com/posts/k8s-port-forwarding/" class="color-inherit dim link">
+            K8s Port Forwarding
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          TIL that you can replace
-assert.Equal(t, 3, len(someSlice)) with
-assert.Len(t, someSlice, 3) Why they mix up which is the expected param is beyond me, but otherwise I like not having to add the len().
+          I have redis in a pod, and wanted to connect to it to see some usage stats this morning.
+My initial, naive attempt was to hit redis directly, thinking maybe the k8s master maps these internal hostnames out to the host; no bueno.
+Next I tried connecting to the pod directly via kubectl exec -it pod/redis-123812739 sh but once I get in there I cannot telnet because that isn&rsquo;t installed. I could&rsquo;ve installed telnet, but I didn&rsquo;t want to add custom stuff to a k8s-managed container.
         </div>
-          <a href="http://hoffmanc.com/posts/assert.len/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/k8s-port-forwarding/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -209,15 +209,14 @@ assert.Len(t, someSlice, 3) Why they mix up which is the expected param is beyon
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/equal-values/" class="color-inherit dim link">
-            Equal Values
+          <a href="http://hoffmanc.com/posts/replication/" class="color-inherit dim link">
+            Replication
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          TIL that assert.EqualValues allows one to compare numerals of differing types for equality:
-package main import ( &#34;testing&#34; &#34;github.com/stretchr/testify/assert&#34; ) func TestFoo(t *testing.T) { assert.EqualValues(t, int64(1), uint(1)) assert.EqualValues(t, int64(1), 1.0) } These asserts should both pass.
+          I spent the last couple of days figuring out if I can replicate a master server to a standby (formerly slave) server, without directly connecting to the master from the standby. The master servers are on premise in this case, and behind a VPN. We need to be able to query this standby, and collect records
         </div>
-          <a href="http://hoffmanc.com/posts/equal-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/replication/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -234,6 +233,18 @@ package main import ( &#34;testing&#34; &#34;github.com/stretchr/testify/assert&
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/assert.len/" class="link black dim">
+              assert.Len
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/equal-values/" class="link black dim">
+              Equal Values
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/streaming/" class="link black dim">
               Streaming
             </a>
@@ -242,18 +253,6 @@ package main import ( &#34;testing&#34; &#34;github.com/stretchr/testify/assert&
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/docker-compose-override/" class="link black dim">
               Docker Compose Override
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://hoffmanc.com/posts/git-timestamps/" class="link black dim">
-              Git Timestamps
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://hoffmanc.com/posts/k8s-monitoring/" class="link black dim">
-              k8s Monitoring
             </a>
           </h2>
         

@@ -6,7 +6,27 @@
     <description>Recent content on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2020 22:21:46 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Nov 2020 13:36:56 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>K8s Port Forwarding</title>
+      <link>http://hoffmanc.com/posts/k8s-port-forwarding/</link>
+      <pubDate>Mon, 30 Nov 2020 13:36:56 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/k8s-port-forwarding/</guid>
+      <description>I have redis in a pod, and wanted to connect to it to see some usage stats this morning.
+My initial, naive attempt was to hit redis directly, thinking maybe the k8s master maps these internal hostnames out to the host; no bueno.
+Next I tried connecting to the pod directly via kubectl exec -it pod/redis-123812739 sh but once I get in there I cannot telnet because that isn&amp;rsquo;t installed. I could&amp;rsquo;ve installed telnet, but I didn&amp;rsquo;t want to add custom stuff to a k8s-managed container.</description>
+    </item>
+    
+    <item>
+      <title>Replication</title>
+      <link>http://hoffmanc.com/posts/replication/</link>
+      <pubDate>Mon, 23 Nov 2020 00:56:11 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/replication/</guid>
+      <description>I spent the last couple of days figuring out if I can replicate a master server to a standby (formerly slave) server, without directly connecting to the master from the standby. The master servers are on premise in this case, and behind a VPN. We need to be able to query this standby, and collect records</description>
+    </item>
+    
     <item>
       <title>assert.Len</title>
       <link>http://hoffmanc.com/posts/assert.len/</link>

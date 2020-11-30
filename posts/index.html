@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/posts/" />
-<meta property="og:updated_time" content="2020-11-15T22:21:46+00:00" />
+<meta property="og:updated_time" content="2020-11-30T13:36:56+00:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -157,6 +157,38 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/k8s-port-forwarding/" class="link black dim">
+        K8s Port Forwarding
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      I have redis in a pod, and wanted to connect to it to see some usage stats this morning.
+My initial, naive attempt was to hit redis directly, thinking maybe the k8s master maps these internal hostnames out to the host; no bueno.
+Next I tried connecting to the pod directly via kubectl exec -it pod/redis-123812739 sh but once I get in there I cannot telnet because that isn&rsquo;t installed. I could&rsquo;ve installed telnet, but I didn&rsquo;t want to add custom stuff to a k8s-managed container.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/replication/" class="link black dim">
+        Replication
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      I spent the last couple of days figuring out if I can replicate a master server to a standby (formerly slave) server, without directly connecting to the master from the standby. The master servers are on premise in this case, and behind a VPN. We need to be able to query this standby, and collect records
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://hoffmanc.com/posts/assert.len/" class="link black dim">
         assert.Len
       </a>
@@ -197,38 +229,6 @@ package main import ( &#34;testing&#34; &#34;github.com/stretchr/testify/assert&
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       I often get down on how verbose Go is as compared to Ruby. However, this is an example where Go (and go-gin) is quite terse for what it&rsquo;s doing:
 chanStream := make(chan string) go func() { defer close(chanStream) for i := 0; i &lt; 10; i += 1 { chanStream &lt;- fmt.Sprintf(&#34;msg %d&#34;, i) } }() c.Stream(func(w io.Writer) bool { if msg, ok := &lt;-chanStream; ok { c.SSEvent(&#34;message&#34;, msg) return true } return false }) In this code we create a streaming HTTP response, such that the main server is not tied up while sending down data to the client.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/docker-compose-override/" class="link black dim">
-        Docker Compose Override
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Note to self: if I am not seeing env var overrides that I specify in a docker compose override file, check the following:
- is the file spelled correctly (e.g., hyphens vs periods and singular!) docker-compose.override.yml is it in the same directory as docker-compose.yml? is the dk convenience alias/script directly citing the config files, such as docker-compose -f docker-compose.yml? If so, you need to add another -f with the override.  
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/git-timestamps/" class="link black dim">
-        Git Timestamps
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      I just ran into a scenario where the git log was not telling me the correct order of commits. This mis-ordering happened because git only keeps/considers the commit timestamps up to the nearest second. So, if you have a script that is creating a bunch of commits, you could have several that are associated with one second, which will result in the mis-ordering.
-To get a more accurate order, use the --graph option on git log.
     </div>
   </div>
 </div>

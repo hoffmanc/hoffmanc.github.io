@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/posts/" />
-<meta property="og:updated_time" content="2020-11-30T13:36:56+00:00" />
+<meta property="og:updated_time" content="2020-12-17T20:55:43+00:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -157,6 +157,38 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/equal-values/" class="link black dim">
+        Equal Values
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      TIL that assert.EqualValues allows one to compare numerals of differing types for equality:
+package main import ( &#34;testing&#34; &#34;github.com/stretchr/testify/assert&#34; ) func TestFoo(t *testing.T) { assert.EqualValues(t, int64(1), uint(1)) assert.EqualValues(t, int64(1), 1.0) } These asserts should both pass.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/streaming/" class="link black dim">
+        Streaming
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      I often get down on how verbose Go is as compared to Ruby. However, this is an example where Go (and go-gin) is quite terse for what it&rsquo;s doing:
+chanStream := make(chan string) go func() { defer close(chanStream) for i := 0; i &lt; 10; i += 1 { chanStream &lt;- fmt.Sprintf(&#34;msg %d&#34;, i) } }() c.Stream(func(w io.Writer) bool { if msg, ok := &lt;-chanStream; ok { c.SSEvent(&#34;message&#34;, msg) return true } return false }) In this code we create a streaming HTTP response, such that the main server is not tied up while sending down data to the client.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://hoffmanc.com/posts/docker-compose-override/" class="link black dim">
         Docker Compose Override
       </a>
@@ -201,38 +233,6 @@ To get a more accurate order, use the --graph option on git log.
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/mui-class-override/" class="link black dim">
-        Mui Class Override
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      If you need to override some CSS in a component that you didn&rsquo;t author, but aren&rsquo;t sure what the options are, just use a dummy one and check the dev tools console for errors. The available class names should be listed in the error message.
-const classes = useStyles() &lt;ExternalComponent classes={{dummy: classes.myCssClass}}/&gt; 
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/tryfinallybash/" class="link black dim">
-        try/finally in Bash
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      If you need to do some cleanup whether or not a part of a bash script ran successfully, but also want to exit immediately if other stuff in that script fails, use a subshell:
-set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fails it exits without the cleanup ( # &lt;--- subshell set -e executableThatLooksForTheFileAndMaybeFails ) rm fileThatAlwaysGetsRemoved 
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 <ul class="pagination">
   <li class="page-item">
@@ -254,13 +254,13 @@ set -e # exit immediately on error touch fileThatAlwaysGetsRemoved # if this fai
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/5/">5</a>
+    <a class="page-link" href="/posts/page/6/">6</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/6/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

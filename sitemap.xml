@@ -4,20 +4,34 @@
   
   <url>
     <loc>http://hoffmanc.com/</loc>
-    <lastmod>2020-11-30T13:36:56+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://hoffmanc.com/posts/k8s-port-forwarding/</loc>
-    <lastmod>2020-11-30T13:36:56+00:00</lastmod>
+    <lastmod>2020-12-17T20:55:43+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://hoffmanc.com/posts/</loc>
+    <lastmod>2020-12-17T20:55:43+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hoffmanc.com/posts/unbuffered/</loc>
+    <lastmod>2020-12-17T20:55:43+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hoffmanc.com/posts/ssl/</loc>
+    <lastmod>2020-12-09T17:13:20+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hoffmanc.com/posts/k8s-port-forwarding/</loc>
     <lastmod>2020-11-30T13:36:56+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

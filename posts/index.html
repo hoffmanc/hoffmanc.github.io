@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/posts/" />
-<meta property="og:updated_time" content="2020-11-30T13:36:56+00:00" />
+<meta property="og:updated_time" content="2020-12-17T20:55:43+00:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -157,6 +157,37 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/unbuffered/" class="link black dim">
+        Unbuffered
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      TIL that python STDOUT is buffered by default (at least for python3). You can get docker logs output by passing the -u flag. I added this to my shebang, so I only have to do ./main.py to run my script.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/ssl/" class="link black dim">
+        SSL
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Some notes so maybe I don&rsquo;t forget how SSL certs work again:
+ certificates are arranged in a chain from CA down the CA cert is special only because it is at the top of the chain you need to use the higher level cert to create lower level ones if you want them in the chain if you don&rsquo;t need a separate authority, you can just use a self signed cert as the trusted root certificate (synonymous with CA?
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://hoffmanc.com/posts/k8s-port-forwarding/" class="link black dim">
         K8s Port Forwarding
       </a>
@@ -202,38 +233,6 @@ assert.Len(t, someSlice, 3) Why they mix up which is the expected param is beyon
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/equal-values/" class="link black dim">
-        Equal Values
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      TIL that assert.EqualValues allows one to compare numerals of differing types for equality:
-package main import ( &#34;testing&#34; &#34;github.com/stretchr/testify/assert&#34; ) func TestFoo(t *testing.T) { assert.EqualValues(t, int64(1), uint(1)) assert.EqualValues(t, int64(1), 1.0) } These asserts should both pass.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/streaming/" class="link black dim">
-        Streaming
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      I often get down on how verbose Go is as compared to Ruby. However, this is an example where Go (and go-gin) is quite terse for what it&rsquo;s doing:
-chanStream := make(chan string) go func() { defer close(chanStream) for i := 0; i &lt; 10; i += 1 { chanStream &lt;- fmt.Sprintf(&#34;msg %d&#34;, i) } }() c.Stream(func(w io.Writer) bool { if msg, ok := &lt;-chanStream; ok { c.SSEvent(&#34;message&#34;, msg) return true } return false }) In this code we create a streaming HTTP response, such that the main server is not tied up while sending down data to the client.
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 <ul class="pagination">
   <li class="page-item">
@@ -255,13 +254,13 @@ chanStream := make(chan string) go func() { defer close(chanStream) for i := 0; 
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
-    <a class="page-link" href="/posts/page/5/">5</a>
+    <a class="page-link" href="/posts/page/6/">6</a>
   </li>
   <li class="page-item">
     <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/posts/page/6/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

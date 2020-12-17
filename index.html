@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/" />
-<meta property="og:updated_time" content="2020-11-30T13:36:56+00:00" />
+<meta property="og:updated_time" content="2020-12-17T20:55:43+00:00" />
 <meta itemprop="name" content="Chris Hoffman">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -183,16 +183,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/k8s-port-forwarding/" class="color-inherit dim link">
-            K8s Port Forwarding
+          <a href="http://hoffmanc.com/posts/unbuffered/" class="color-inherit dim link">
+            Unbuffered
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          I have redis in a pod, and wanted to connect to it to see some usage stats this morning.
-My initial, naive attempt was to hit redis directly, thinking maybe the k8s master maps these internal hostnames out to the host; no bueno.
-Next I tried connecting to the pod directly via kubectl exec -it pod/redis-123812739 sh but once I get in there I cannot telnet because that isn&rsquo;t installed. I could&rsquo;ve installed telnet, but I didn&rsquo;t want to add custom stuff to a k8s-managed container.
+          TIL that python STDOUT is buffered by default (at least for python3). You can get docker logs output by passing the -u flag. I added this to my shebang, so I only have to do ./main.py to run my script.
         </div>
-          <a href="http://hoffmanc.com/posts/k8s-port-forwarding/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/unbuffered/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -209,14 +207,15 @@ Next I tried connecting to the pod directly via kubectl exec -it pod/redis-12381
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://hoffmanc.com/posts/replication/" class="color-inherit dim link">
-            Replication
+          <a href="http://hoffmanc.com/posts/ssl/" class="color-inherit dim link">
+            SSL
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          I spent the last couple of days figuring out if I can replicate a master server to a standby (formerly slave) server, without directly connecting to the master from the standby. The master servers are on premise in this case, and behind a VPN. We need to be able to query this standby, and collect records
+          Some notes so maybe I don&rsquo;t forget how SSL certs work again:
+ certificates are arranged in a chain from CA down the CA cert is special only because it is at the top of the chain you need to use the higher level cert to create lower level ones if you want them in the chain if you don&rsquo;t need a separate authority, you can just use a self signed cert as the trusted root certificate (synonymous with CA?
         </div>
-          <a href="http://hoffmanc.com/posts/replication/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://hoffmanc.com/posts/ssl/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -233,6 +232,18 @@ Next I tried connecting to the pod directly via kubectl exec -it pod/redis-12381
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/k8s-port-forwarding/" class="link black dim">
+              K8s Port Forwarding
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://hoffmanc.com/posts/replication/" class="link black dim">
+              Replication
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/assert.len/" class="link black dim">
               assert.Len
             </a>
@@ -241,18 +252,6 @@ Next I tried connecting to the pod directly via kubectl exec -it pod/redis-12381
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://hoffmanc.com/posts/equal-values/" class="link black dim">
               Equal Values
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://hoffmanc.com/posts/streaming/" class="link black dim">
-              Streaming
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://hoffmanc.com/posts/docker-compose-override/" class="link black dim">
-              Docker Compose Override
             </a>
           </h2>
         

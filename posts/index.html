@@ -35,7 +35,7 @@
 <meta property="og:description" content="math is to software engineering as fluid dynamics is to plumbing" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://hoffmanc.com/posts/" />
-<meta property="og:updated_time" content="2020-12-17T20:55:43+00:00" />
+<meta property="og:updated_time" content="2021-02-19T10:54:31+00:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="math is to software engineering as fluid dynamics is to plumbing">
 <meta name="twitter:card" content="summary"/>
@@ -157,6 +157,22 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://hoffmanc.com/posts/tmux-current-path/" class="link black dim">
+        Tmux Current Path
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Finally got annoyed enough with new tmux panes/windows not opening on the directory I&rsquo;m currently on:
+bind c new-window -c &quot;#{pane_current_path}&quot; bind % split-window -h -c &quot;#{pane_current_path}&quot; bind '&quot;' split-window -v -c &quot;#{pane_current_path}&quot; 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://hoffmanc.com/posts/unbuffered/" class="link black dim">
         Unbuffered
       </a>
@@ -216,23 +232,6 @@ Next I tried connecting to the pod directly via kubectl exec -it pod/redis-12381
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://hoffmanc.com/posts/assert.len/" class="link black dim">
-        assert.Len
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      TIL that you can replace
-assert.Equal(t, 3, len(someSlice)) with
-assert.Len(t, someSlice, 3) Why they mix up which is the expected param is beyond me, but otherwise I like not having to add the len().
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
 <ul class="pagination">
   <li class="page-item">
@@ -270,7 +269,7 @@ assert.Len(t, someSlice, 3) Why they mix up which is the expected param is beyon
     <footer class="bg-dark-blue bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://hoffmanc.com/" >
-    &copy;  Chris Hoffman 2020 
+    &copy;  Chris Hoffman 2021 
   </a>
     <div>
 

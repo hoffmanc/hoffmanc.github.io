@@ -6,7 +6,17 @@
     <description>Recent content on Chris Hoffman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Dec 2020 20:55:43 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Feb 2021 10:54:31 +0000</lastBuildDate><atom:link href="http://hoffmanc.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tmux Current Path</title>
+      <link>http://hoffmanc.com/posts/tmux-current-path/</link>
+      <pubDate>Fri, 19 Feb 2021 10:54:31 +0000</pubDate>
+      
+      <guid>http://hoffmanc.com/posts/tmux-current-path/</guid>
+      <description>Finally got annoyed enough with new tmux panes/windows not opening on the directory I&amp;rsquo;m currently on:
+bind c new-window -c &amp;quot;#{pane_current_path}&amp;quot; bind % split-window -h -c &amp;quot;#{pane_current_path}&amp;quot; bind &#39;&amp;quot;&#39; split-window -v -c &amp;quot;#{pane_current_path}&amp;quot; </description>
+    </item>
+    
     <item>
       <title>Unbuffered</title>
       <link>http://hoffmanc.com/posts/unbuffered/</link>
